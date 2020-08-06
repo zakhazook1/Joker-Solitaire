@@ -2,7 +2,7 @@
 /*
 To-Do List
 Build Webpage - Morris & Karon /Done
-Build Cards - Zac &
+Build Cards - Zac & 
 Add motion to the cards - Volunteer Here
 Keep the cards from escaping the square - Volunteer Here
 Finish ScoreBoard - Volunteer Here
@@ -85,7 +85,7 @@ var $scoreSpan = d.querySelector('#score .score span');
 var scoreB = 0;
 
 function setup() {
-	createCanvas(1000, 1000);
+	createCanvas(800, 800);
   rect(rect_ypos, rect_xpos, rectW, rectH);
 
 }

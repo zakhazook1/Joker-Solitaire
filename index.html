@@ -5,40 +5,24 @@
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
-  <style>
-    body{background-color : lime}
-   
-    h1{color: blue;
-    font-family: 'Red Rose', cursive;
-    text-align: center;
-    }
-    h2{color: magenta;
-    font-family: 'Red Rose', cursive;
-    text-align: center;
-    }
-    h3{color: white;
-    font-family: 'Red Rose', cursive;
-    text-align: center
-    }
-    p{color: white;
-    font-family: 'Red Rose', cursive;
-    text-align: center;
-    }
-   </style>
+ 
   </head>
   <body>
-    <h1> WELCOME TO SOLITAIRE! </h1>
-    <h2> Created by Najee Lee, Morris Williams, Karon Coates, Zachiah Zook, Jamartae Evans, and Vandrick Bryant</h2>
-    <h3> How To Play Solitaire</h3>
-    <p>
+   <h1> WELCOME TO SOLITAIRE!</h1>
+    <button type= "button" onclick="document.getElementById('head2').style.color = 'yellow'">Click Here</button>
+   <h2 id = "head2"> Created by Najee Lee, Morris Williams, Karon Coates, Zachiah Zook, Jamartae Evans, and Vandrick Bryant</h2>
+   <h3> How To Play Solitaire</h3>
+   <p id = "hide">
       The first objective is to release and play into position certain cards to build up each foundation, in sequence and in suit, from the ace through the king. The ultimate objective is to build the whole pack onto the foundations, and if that can be done, the Solitaire game is won.The rank of cards in Solitaire games is: K (high), Q, J, 10, 9, 8, 7, 6, 5, 4, 3, 2, A (low).
-    </p>
-    <p id="demo"></p>
-  
-    <iframe width="420" height="345"
+   </p>
+   <button type="button" onclick="document.getElementById('hide').style.display='none'">Let's Play!</button>
+
+   <iframe width="420" height="345"
     src="https://www.youtube.com/watch?v=j38BhamLdNI">
-    </iframe>
-    <p> We hope you enjoy playing our game of Solitaire!</p>
-    <script src="script.js"></script>
+   </iframe>
+
+   <p> We hope you enjoy playing our game of Solitaire!</p>
+   <p id = "demo"> </p>
+   <script src="script.js"></script>
   </body>
 </html>

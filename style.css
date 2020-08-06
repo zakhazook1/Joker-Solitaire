@@ -1,0 +1,33 @@
+body{
+  background-color : lime;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1200px;
+  background-attachment: fixed; 
+  border: none;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;   
+}
+   
+h1{color: blue;
+font-family: 'Red Rose', cursive;
+text-align: center;
+}
+
+h2{color: magenta;
+font-family: 'Red Rose', cursive;
+text-align: center;
+}
+
+h3{color: white;
+font-family: 'Red Rose', cursive;
+text-align: center;
+}
+
+p{color: white;
+font-family: 'Red Rose', cursive;
+text-align: center;
+font-size: 20px;
+}
