@@ -2,7 +2,7 @@
 /*
 To-Do List
 Build Webpage - Morris & Karon /Done
-Build Cards - Zac & 
+Build Cards - Zac & Najee
 Add motion to the cards - Volunteer Here
 Keep the cards from escaping the square - Volunteer Here
 Finish ScoreBoard - Volunteer Here
@@ -12,7 +12,21 @@ var canvasW = 800, canvasH = 800;
 let suits = ['Clubs', 'Diamonds', 'Hearts', 'Spades'];
 let values = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
 var rect_ypos = 200, rect_xpos = 100, rectW = 40, rectH = 60;
+var score = 0;
 
+function setup() {
+	createCanvas(500, 400);
+  rect(rect_ypos, rect_xpos, rectW, rectH);
+
+}
+
+function draw() {
+	background(225);
+  displayScore();
+  fill(color(255, 255, 255));
+  rect(mouseX, mouseY, rectW, rectH);
+  //updatescore();
+}
 class Card {
   constructor(suit, value){
     this.suit = suit;
@@ -84,23 +98,6 @@ var $scoreSpan = d.querySelector('#score .score span');
 //scoreboard variables
 var scoreB = 0;
 
-function setup() {
-	createCanvas(800, 800);
-  rect(rect_ypos, rect_xpos, rectW, rectH);
-
-}
-
-function draw() {
-	background(225);
-  document.write(Date());
-  displayScore();
-  fill(color(255, 255, 255));
-  rect(mouseX, mouseY, rectW, rectH);
-  //updatescore();
-}
-
-
-
 /*function updateScore() {
 	if (rectangR >= canvasW) {
 		scoreL++;
@@ -115,5 +112,5 @@ function draw() {
 function displayScore() {
 	fill(color(0,0,0));
 	textSize(20);
-	text("Score: " + scoreB, canvasW/4, 40);
+	text("Score: " + score, canvasW/4, 40);
 }
