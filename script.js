@@ -4,27 +4,32 @@ To-Do List
 Build Webpage - Morris & Karon /Done
 Build Cards - Zac & Najee
 Add motion to the cards - Volunteer Here
-Keep the cards from escaping the square - Volunteer Here
+Keep the cards from escaping the square - Vandrick
 Finish ScoreBoard - Volunteer Here
 */
+//get the game to go fullscreen when the lets play button is pressed(Optional)
+//Randomize the cards
+//
 
 var canvasW = 800, canvasH = 800;
 let suits = ['Clubs', 'Diamonds', 'Hearts', 'Spades'];
-let values = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
-var rect_ypos = 200, rect_xpos = 100, rectW = 40, rectH = 60;
-var score = 0;
+let values = ['Ace','2','3','4','5','6','7','8','9','10','Joker','Queen','King'];
+var scoreBoard = 0;
+let button;
+
 
 function setup() {
-	createCanvas(500, 400);
-  rect(rect_ypos, rect_xpos, rectW, rectH);
+	createCanvas(800, 800);
+  ellipse(mouseX, mouseY, 10,10);
 
 }
 
 function draw() {
 	background(225);
   displayScore();
-  fill(color(255, 255, 255));
-  rect(mouseX, mouseY, rectW, rectH);
+  fill(color(255,0,0));
+  ellipse(mouseX, mouseY, 10,10);
+
   //updatescore();
 }
 class Card {
@@ -77,9 +82,13 @@ console.log(deck.deal());
 
 //table
 var table = []
-s = table['stock'];
-w = table['wastle'];
-t = table['tab'];
+table['stock'] = s;
+table['wastle'] = w;
+table['spades'] = spades;
+table['hearts'] = hearts;
+table['diamonds'] = diamonds;
+table['clubs'] = clubs;
+table['tab'] = t;
 
 //initial face up cards
 var playedCards = 
@@ -94,6 +103,23 @@ var $moveCount = d.querySelector('#move-count');
 var $moveCountSpan = d.querySelector('#move-count span');
 var $score = d.querySelector('#score .score');
 var $scoreSpan = d.querySelector('#score .score span');
+var $playPause = d.querySelector('#play-pause');
+var $upper = d.querySelector('#upper-row');
+var $lower = d.querySelector('#lower-row');
+var $stock = d.querySelector('#stock');
+var $waste = d.querySelector('#waste');
+var $fnd = d.querySelector('#find');
+var $tab = d.querySelector('#tab');
+var $autoWin = d.querySelector('#auto-win');
+
+// other global variables
+var clock = 0;
+var time = 0;
+var moves = 0;
+var score = 0;
+var bonus = 0;
+var lastEventTime = 0;
+var unplayedTabCards = [];
 
 //scoreboard variables
 var scoreB = 0;
@@ -112,5 +138,5 @@ var scoreB = 0;
 function displayScore() {
 	fill(color(0,0,0));
 	textSize(20);
-	text("Score: " + score, canvasW/4, 40);
+	text("Score: " + scoreBoard, canvasW/4, 40);
 }
